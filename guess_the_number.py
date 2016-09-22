@@ -3,8 +3,13 @@ secret_number = 5
 guess = int(raw_input("What's the number? "))
 
 while (guess != 5):
-    print "Nope, try again."
-    guess = int(raw_input("What's the number? "))
+    if guess > 5:
+        print ("%d is too high.") % guess
+        guess = int(raw_input("What's the number? "))
+
+    elif guess < 5:
+        print ("%d is too low") % guess
+        guess = int(raw_input("What's the number? "))
 
 else:
     print "Yes! You win!"
